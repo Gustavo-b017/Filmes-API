@@ -21,7 +21,7 @@ function Home() {
     return (
         <div className='Container'>
 
-            <h1>Movies</h1>
+            <h1>Filmes Populares</h1>
 
             <ul className='MovieList'>
                 {movies.map(movie => {

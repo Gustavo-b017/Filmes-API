@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #3970b8;
+}
+
+.Container{
+  padding: 2rem;
+  
+  h1 {
+    text-align: center;
+    margin: 4rem 0;
+  }
+}
+
+.MovieList{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 3rem;
+  row-gap: 4rem;
+}
+
+.Movie{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 180px;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+  }
+
+  a {
+    transition: all 0.3s;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+  }
+}

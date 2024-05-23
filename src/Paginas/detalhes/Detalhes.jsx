@@ -5,7 +5,7 @@ function Detalhes() {
     const { id } = useParams();
     console.log(id)
     return ( 
-        <h1>detalhes do filme</h1>
+        <h1>detalhes do filmes</h1>
      );
 }
 

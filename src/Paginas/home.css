@@ -11,7 +11,8 @@ body {
 
 .Container{
   padding: 2rem;
-  
+  max-width: 1400px;
+  margin: 0 auto;
   h1 {
     text-align: center;
     margin: 4rem 0;
@@ -21,7 +22,7 @@ body {
 .MovieList{
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   column-gap: 3rem;
   row-gap: 4rem;
 }
@@ -32,7 +33,7 @@ body {
   align-items: center;
 
   img {
-    width: 180px;
+    width: 230px;
     border-radius: 1rem;
     margin-bottom: 2rem;
   }

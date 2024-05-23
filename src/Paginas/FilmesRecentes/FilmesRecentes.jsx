@@ -1,27 +1,25 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './home.css';
-import { APIkey } from '../config/key';
 
-function Home() {
+import { APIkey } from '../../config/key';
+function FilmesRecentes() {
 
-    const imagePath = 'https://image.tmdb.org/t/p/w500/'
+        const imagePath = 'https://image.tmdb.org/t/p/w500/'
 
-    const [movies, setMovies] = useState([])
+        const [movies, setMovies] = useState([])
 
-    useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}&language=en-US`)
-        .then(response => response.json())
-        .then(data => {
-            setMovies(data.results)
-            console.log(data.results)
-        })
-    }, [])
-
-    return (
+        useEffect(() => {
+            fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${APIkey}&language=en-US`)
+            .then(response => response.json())
+            .then(data => {
+                setMovies(data.results)
+                console.log(data.results)
+            })
+        }, [])
+    return (  
         <div className='Container'>
 
-            <h1>Filmes Populares</h1>
+            <h1>Filmes Recentes</h1>
 
             <ul className='MovieList'>
                 {movies.map(movie => {
@@ -36,7 +34,10 @@ function Home() {
                 })}
             </ul>
         </div>
+    
+        
+
     );
 }
 
-export default Home;
+export default FilmesRecentes;

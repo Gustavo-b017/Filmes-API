@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
+import { APIKey } from '../config/key';
+import { imagePath } from '../config/ImgPath';
 
 
 function Home() {
 
-    const APIkey = '58231603de0e8de6f8e86c07e1c86515'
-    const imagePath = 'https://image.tmdb.org/t/p/w500/'
-
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}&language=en-US`)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIKey}&language=en-US`)
         .then(response => response.json())
         .then(data => {
             setMovies(data.results)

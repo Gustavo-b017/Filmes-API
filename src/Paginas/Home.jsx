@@ -19,7 +19,7 @@ function Home() {
     }, [])
 
     return (
-        <div className='Container'>
+        <div className='ContainerHome'>
 
             <h1>Filmes Populares</h1>
 

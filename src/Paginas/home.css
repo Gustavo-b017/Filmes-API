@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@ body {
   background-color: #3970b8;
 }
 
-.Container{
+.ContainerHome{
   padding: 2rem;
   
   h1 {

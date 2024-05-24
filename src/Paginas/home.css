@@ -45,10 +45,12 @@ body {
   }
 
   a {
-    transition: all 0.3s;
+    /* transition: all 0.3s; */
+    
   }
 
   a:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+   
   }
 }

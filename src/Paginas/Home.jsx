@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './home.css';
 import { APIkey } from '../config/key';
 
 function Home() {
@@ -19,18 +18,18 @@ function Home() {
     }, [])
 
     return (
-        <div className='Container'>
+        <div className='p-8 max-w-11xl my-0 mx-auto'>
 
-            <h1>Filmes Populares</h1>
+            <h1 className='pt-4 text-xl bold text-center my-16 mx-0'>Filmes Populares</h1>
 
-            <ul className='MovieList'>
+            <ul className='list-none grid gap-y-16 gap-x-12 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]'>
                 {movies.map(movie => {
                     return (
-                        <li className='Movie' key={movie.id}>
+                        <li className='flex flex-col items-center hover:shadow-2xl hover:rounded-2xl transition duration-300 ' key={movie.id}>
                             <Link to={`/details/${movie.id}`}>
-                                <img src={`${imagePath}${movie.poster_path}`} alt={movie.title}/>
+                                <img className='w-[230px] rounded-2xl mb-8 ' src={`${imagePath}${movie.poster_path}`} alt={movie.title}/>
                             </Link>
-                            <span>{movie.title}</span>
+                            <span className='font-bold text-center text-lg'>{movie.title}</span>
                         </li>
                     )
                 })}

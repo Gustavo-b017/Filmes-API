@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { APIkey } from '../../config/key';
-import './detalhes.css'
+// import './detalhes.css'
 function Detalhes() {
   const { id } = useParams()
   const [movie, setMovie] = useState([])
@@ -26,14 +26,14 @@ function Detalhes() {
   }, [id])
 
   return (
-    <div className="ContainerDetalhes">
-      <div className="movie">
-      <img src={movie.image} alt={movie.sinopse}/>
-      <div className="details">
-        <h1>{movie.title}</h1>
-        <span>Sinopse: {movie.sinopse}</span>
-        <span className='release-date'>Release date: {movie.releaseDate}</span>
-        <Link to="/"><button>Go Back</button></Link>
+    <div className="py-0 px-8">
+      <div className="h-screen flex justify-center items-center">
+      <img className='w-[300px] rounded-[1rem] mb-8' src={movie.image} alt={movie.sinopse}/>
+      <div className="flex flex-col flex items-start ml-16 max-w-1/2">
+        <h1 className='text-2xl my-10 mx-0'>{movie.title}</h1>
+        <span> Sinopse: {movie.sinopse}</span>
+        <span className='text-base opacity-50'>Release date: {movie.releaseDate}</span>
+        <Link to="/"><button className='bg-[#6654da] cursor-pointer rounded-[1rem] text-white py-3 px-8 mt-4 text-base transition-all duration-300'>Go Back</button></Link>
       </div>
     </div>
     </div>

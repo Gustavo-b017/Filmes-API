@@ -30,10 +30,10 @@ function Detalhes() {
       <div className="h-screen flex justify-center items-center">
       <img className='w-[300px] rounded-[1rem] mb-8' src={movie.image} alt={movie.sinopse}/>
       <div className="flex flex-col flex items-start ml-16 max-w-1/2">
-        <h1 className='text-2xl my-10 mx-0'>{movie.title}</h1>
-        <span> Sinopse: {movie.sinopse}</span>
-        <span className='text-base opacity-50'>Release date: {movie.releaseDate}</span>
-        <Link to="/"><button className='bg-[#6654da] cursor-pointer rounded-[1rem] text-white py-3 px-8 mt-4 text-base transition-all duration-300'>Go Back</button></Link>
+        <h1 className='text-2xl my-10 mx-0 dark:text-white'>{movie.title}</h1>
+        <span className='dark:text-white'> Sinopse: {movie.sinopse}</span>
+        <span className='text-base opacity-50 dark:text-white'>Release date: {movie.releaseDate}</span>
+        <Link to="/"><button className='bg-red-500 cursor-pointer rounded-[1rem] text-white  py-3 px-8 mt-4 text-base transition-all duration-300'>Voltar</button></Link>
       </div>
     </div>
     </div>

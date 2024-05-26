@@ -5,11 +5,7 @@ import { useState } from "react";
 
 function NavBar() {
 
-    const [darkMode, setdarkMode] = useState(false);
-
-    const toggleDarkMode = () => {
-        setdarkMode(!darkMode)
-    }
+  
 
     const [isOpen, setIsOpen] = useState(false);
 

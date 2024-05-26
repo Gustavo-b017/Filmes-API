@@ -16,7 +16,7 @@ function App() {
       <body className='overflow-x-hidden bg-white dark:bg-neutral-900'>
       <NavBar />
       <Outlet/>
-      <button className="fixed bottom-72 " onClick={toggleDarkMode}>
+      <button className="fixed bottom-16  right-2 " onClick={toggleDarkMode}>
         <img src="./src/img/sollua.png" alt=""  className=" size-16"/>
         </button>
     </body>
